@@ -29,7 +29,12 @@ my $cmd = Perinci::CmdLine::Classic->new(
     default_subcommand => 'trash',
     undo => 1,
     log => 1,
+    log_level => 'info',
 );
+
+# share undo dir with trash-u
+require File::HomeDir;
+$cmd->undo_dir(File::HomeDir->my_home . "/.trash-u");
 
 delete $cmd->common_opts->{list};
 
