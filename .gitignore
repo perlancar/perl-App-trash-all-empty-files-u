@@ -2,3 +2,4 @@ App-trash-all-empty-files-u-*
 .build
 *~
 nytprof*
+.DS_Store
